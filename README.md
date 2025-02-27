@@ -37,7 +37,7 @@ VerifAI is an advanced AI-driven platform designed to combat misinformation by v
 ## Installation & Setup
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/your-repo/VerifAI.git
+   git clone https://github.com/naiduyaswanthreddy/VerifAI.git
    cd VerifAI
    ```
 2. **Install dependencies:**
