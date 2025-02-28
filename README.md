@@ -81,8 +81,6 @@ uvicorn deepfake_api:app --host 0.0.0.0 --port 8000
 
 ### 🔹 Frontend Setup
 ```sh
-Copy
-Edit
 # Navigate to the frontend directory
 cd frontend
 
@@ -97,48 +95,34 @@ npm start
 Fake News Detection API
 🔹 Check API Status
 ```http
-Copy
-Edit
 GET /api/status
 ```
 🔹 Analyze Text for Fake News
 ```http
-Copy
-Edit
 POST /api/analyze/text
 ```
 Request Body:
 
 ```json
-Copy
-Edit
 { "text": "Some news content here..." }
 ```
 🔹 Analyze URL for Fake News
 ```http
-Copy
-Edit
 POST /api/analyze/url
 ```
 Request Body:
 
 ```json
-Copy
-Edit
 { "url": "https://news-website.com/article" }
 ```
 Deepfake Detection API
 🔹 Upload Video for Deepfake Analysis
 ```http
-Copy
-Edit
 POST /api/analyze/video
 ```
 Request (multipart/form-data):
 
 ```sh
-Copy
-Edit
 { "video": "<video_file.mp4>" }
 ```
 
