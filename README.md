@@ -1,64 +1,146 @@
-# VerifAI - AI-Powered Truth Verification Platform
+# **VerfAI: AI-Powered Fake News & Deepfake Detection**
 
-## Overview
-VerifAI is an advanced AI-driven platform designed to combat misinformation by verifying the authenticity of news articles and videos. The platform leverages state-of-the-art AI models to analyze content credibility, ensuring users can distinguish between legitimate and misleading information. With a gamified, cyberpunk-inspired dark-themed UI, VerifAI provides an engaging and user-friendly experience for fact-checking.
+## 📌 Overview
+**VerfAI** is an **AI-powered misinformation detection platform** that identifies **fake news and deepfake media** using state-of-the-art **Natural Language Processing (NLP) and Computer Vision (CV) models**. It features a **multilingual chatbot for automatic translation** and a **two-layered verification system**, ensuring high accuracy in detecting misinformation across different media formats.
 
-## Features
-✔ **AI-Based Fact-Checking** – Verify news articles for authenticity using Natural Language Processing (NLP) and trusted fact-checking sources.  
-✔ **Deepfake Video Detection** – Analyze uploaded videos or URLs using AI to detect signs of digital manipulation.  
-✔ **Gamified UI Experience** – Designed with a dark cyberpunk theme, glowing UI elements, and interactive features.  
-✔ **User-Friendly Interface** – Intuitive design ensuring seamless interaction.  
-✔ **Real-Time Verification** – Get instant credibility assessments for news and videos.  
-✔ **Comprehensive Credibility Reports** – Receive detailed insights about analyzed content.  
+## 🚀 Key Features
+- ✅ **Multilingual Chatbot for Translation** – Converts regional language text into English using **mBART & self-attention mechanisms**  
+- ✅ **Two-Layered Fake News Detection** – Combines **Google Fact Check API & Wikipedia API** with **DistilBERT (NLP Transformer)**  
+- ✅ **Deepfake Detection with AI** – Uses **ExecutionNet (CNN-Based Model) + FastAPI** for real-time analysis  
+- ✅ **User-Friendly Interface** – Supports **Web UI, Chrome Extension, and API-based integration**  
+- ✅ **Optimized for Speed & Efficiency** – Deployable using **Docker, AWS/GCP**, ensuring fast and scalable processing  
 
-## Tech Stack
-- **Frontend:** React.js, Tailwind CSS, Lucide-react for icons, Framer Motion for animations
-- **Backend:** Node.js, Express.js (for API development and AI model integration)
-- **AI Models:** BERT (for NLP-based text analysis), MediaPipe/OpenCV (for deepfake detection)
-- **Database:** Firebase or MongoDB (for storing user history and logs)
-- **Deployment:** Vercel / Netlify (for frontend), AWS/GCP (for AI processing and model hosting)
 
-## How It Works
-### 1. **News Verification:**
-   - Users enter a news article URL or input text manually.
-   - The AI cross-checks content with fact-checking databases and linguistic analysis.
-   - Displays a credibility score categorized as:
-     - 🟢 **Trustworthy** (Green)
-     - 🟡 **Unverified** (Yellow)
-     - 🔴 **Fake News** (Red)
-   - Provides a detailed report with explanations and source references.
-   
-### 2. **Deepfake Video Detection:**
-   - Users upload a video file or provide a URL.
-   - AI analyzes frames, facial expressions, and inconsistencies using deep learning models.
-   - The platform displays results indicating whether the video is authentic or AI-manipulated.
-   - Generates an in-depth analysis of detected anomalies.
-   
-## Installation & Setup
-1. **Clone the repository:**
-   ```sh
-   git clone https://github.com/naiduyaswanthreddy/VerifAI.git
-   cd VerifAI
-   ```
-2. **Install dependencies:**
-   ```sh
-   npm install
-   ```
-3. **Run the development server:**
-   ```sh
-   npm run dev
-   ```
-4. **Open in browser:**
-   ```
-   http://localhost:3000
-   ```
+## 🔬 Problem Statement
+In today's digital world, misinformation spreads faster than ever. Fake news can **manipulate opinions, influence politics, and cause real-world harm.** Deepfake videos add another layer of deception, making it hard to differentiate **real from fake.**  
 
-## Future Enhancements
-🚀 **User Authentication & Profiles** – Save verification history, allow user personalization.  
-🚀 **Browser Extension** – Instant fact-checking while browsing articles or watching videos.  
-🚀 **Enhanced AI Models** – Improving accuracy of deepfake detection and NLP-based fact-checking.  
-🚀 **Community Reporting System** – Users can flag misinformation and contribute to database improvements.  
-🚀 **Multi-Language Support** – Expanding to detect misinformation across different languages.  
+### 🚧 **Current Challenges & Gaps**
+- ❌ **Language Barriers** – Existing fake news detection models are **English-centric**, ignoring regional misinformation  
+- ❌ **Manual & Slow Verification** – Fact-checking is **time-consuming and lacks automation**  
+- ❌ **Inefficient Deepfake Detection** – Many tools **fail at real-time analysis** of deepfake videos  
+- ❌ **High Computational Costs** – AI-based models can be **expensive & difficult to scale**  
 
-## License
-This project is licensed under the MIT License. See `LICENSE` for details.
+### ✅ **Why VerfAI?**
+- ✅ **Multilingual Support** – Translates **regional language content** into English before analysis  
+- ✅ **Layered Fake News Detection** – Uses **fact-checking APIs + AI model** for verification  
+- ✅ **Fast & Scalable Deepfake Analysis** – Real-time **image & video deepfake detection** using ExecutionNet  
+- ✅ **Low-Resource Optimized** – Balances **accuracy & efficiency** with **DistilBERT** for NLP tasks  
+
+
+## 🏗 Architecture & Tech Stack  
+
+### 🔹 **System Flow & Components**
+1️⃣ **User Input Layer:**  
+   - Users provide **text, URLs, or video files** via **Web UI, Chrome Extension, or API**  
+
+2️⃣ **Multilingual Chatbot (Translation Module):**  
+   - Uses **mBART (Sequence-to-Sequence Transformer Model)** for **regional language translation into English**  
+   - Implements **Self-Attention Mechanism & On-the-Fly Transliteration** to maintain **tone, intent, and accuracy**  
+
+3️⃣ **Fake News Detection (Two-Layered Approach):**  
+   - **Layer 1:** **Google Fact Check API** & **Wikipedia API** for **real-time external verification**  
+   - **Layer 2:** **DistilBERT Model** trained on **LIAR & IFND datasets** for deep **AI-driven credibility scoring**  
+   - **Preprocessing:** Uses **NLTK for stopword removal & lemmatization**, and **DistilBertTokenizerFast for tokenization**  
+
+4️⃣ **Deepfake Detection (Two-Layered Approach):**  
+   - **Layer 1:** **FastAPI** for **efficient API-based inference**  
+   - **Layer 2:** **ExecutionNet (CNN-Based AI Model)** trained on **deepfake image datasets**  
+   - **Processing:** Extracts **video frames**, detects **manipulated regions**, and outputs **real or fake verdict**  
+
+5️⃣ **Deployment & Integration:**  
+   - **Backend:** Flask (Fake News API) + FastAPI (Deepfake API)  
+   - **Frontend:** React.js for user interface  
+   - **Database:** PostgreSQL for storing verification logs & results  
+   - **Cloud & Containerization:** Docker for easy deployment, AWS/GCP for scalability  
+
+
+## ⚙ Installation & Setup  
+
+### 🔹 **Prerequisites**
+- Python 3.8+  
+- Flask & FastAPI  
+- PostgreSQL  
+- Node.js & React  
+- Docker (for containerization)  
+
+### 🔹 **Backend Setup**
+```sh
+# Clone the repository
+git clone https://github.com/your-repo/VerfAI.git
+cd VerfAI
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run Flask API for fake news detection
+python api.py
+
+# Run FastAPI for deepfake detection
+uvicorn deepfake_api:app --host 0.0.0.0 --port 8000
+```
+
+### 🔹 Frontend Setup
+```sh
+Copy
+Edit
+# Navigate to the frontend directory
+cd frontend
+
+# Install dependencies
+npm install
+
+# Start the React app
+npm start
+```
+
+### 📜 API Endpoints
+Fake News Detection API
+🔹 Check API Status
+```http
+Copy
+Edit
+GET /api/status
+```
+🔹 Analyze Text for Fake News
+```http
+Copy
+Edit
+POST /api/analyze/text
+```
+Request Body:
+
+```json
+Copy
+Edit
+{ "text": "Some news content here..." }
+```
+🔹 Analyze URL for Fake News
+```http
+Copy
+Edit
+POST /api/analyze/url
+```
+Request Body:
+
+```json
+Copy
+Edit
+{ "url": "https://news-website.com/article" }
+```
+Deepfake Detection API
+🔹 Upload Video for Deepfake Analysis
+```http
+Copy
+Edit
+POST /api/analyze/video
+```
+Request (multipart/form-data):
+
+```sh
+Copy
+Edit
+{ "video": "<video_file.mp4>" }
+```
+
+### 🎯 Conclusion
+VerfAI is a powerful, AI-driven misinformation detection platform that leverages NLP, deep learning, and external fact-checking sources to identify fake news and deepfake media. By providing real-time, multilingual, and scalable solutions, VerfAI helps combat digital deception effectively.
