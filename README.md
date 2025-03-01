@@ -1,7 +1,7 @@
-# **VerfAI: AI-Powered Fake News & Deepfake Detection**
+# **VerifAI: AI-Powered Fake News & Deepfake Detection**
 
 ## 📌 Overview
-**VerfAI** is an **AI-powered misinformation detection platform** that identifies **fake news and deepfake media** using state-of-the-art **Natural Language Processing (NLP) and Computer Vision (CV) models**. It features a **multilingual chatbot for automatic translation** and a **two-layered verification system**, ensuring high accuracy in detecting misinformation across different media formats.
+**VerifAI** is an **AI-powered misinformation detection platform** that identifies **fake news and deepfake media** using state-of-the-art **Natural Language Processing (NLP) and Computer Vision (CV) models**. It features a **multilingual chatbot for automatic translation** and a **two-layered verification system**, ensuring high accuracy in detecting misinformation across different media formats.
 
 ## 🚀 Key Features
 - ✅ **Multilingual Chatbot for Translation** – Converts regional language text into English using **mBART & self-attention mechanisms**  
@@ -127,4 +127,4 @@ Request (multipart/form-data):
 ```
 
 ### 🎯 Conclusion
-VerfAI is a powerful, AI-driven misinformation detection platform that leverages NLP, deep learning, and external fact-checking sources to identify fake news and deepfake media. By providing real-time, multilingual, and scalable solutions, VerfAI helps combat digital deception effectively.
+VerifAI is a powerful, AI-driven misinformation detection platform that leverages NLP, deep learning, and external fact-checking sources to identify fake news and deepfake media. By providing real-time, multilingual, and scalable solutions, VerfAI helps combat digital deception effectively.
